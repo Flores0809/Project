@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JapKor - A Fusion of Japanese and Korean Flavors</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #e74c3c;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Section Header Styles (for Menu, About, Gallery) */
+        .section-header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /* Menu Section Styles */
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .menu-item button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu-item button:hover {
+            background-color: #c0392b;
+        }
+
+        /* About Section Styles */
+        .about {
+            background-color: #ecf0f1;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Gallery Section Styles */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            width: 300px;
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Contact Section Styles */
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: white;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #e74c3c;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h1>JapKor</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" id="hero">
+        <h2>Welcome to JapKor</h2>
+        <p>Experience the perfect fusion of Japanese and Korean culinary traditions with our signature dishes.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section" id="menu">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+        </div>
+        <div class="menu">
+            <!-- Baked Kimbap Item -->
+            <div class="menu-item">
+                <img src="BakedKim.jpg" alt="Baked Kimbap">
+                <h3>Baked Kimbap</h3>
+                <p>A delicious twist on traditional kimbap, baked to perfection with a crispy exterior.</p>
+                <a href="#contact">
+                    <button>Order Now</button>
+                </a>
+            </div>
+
+            <!-- Triangular Kimbap Item -->
+            <div class="menu-item">
+                <img src="Triangular Kimbap.jpg" alt="Triangular Kimbap">
+                <h3>Triangular Kimbap</h3>
+                <p>Our iconic triangular-shaped kimbap filled with flavorful ingredients wrapped in seaweed.</p>
+                <a href="#contact">
+                    <button>Order Now</button>
+                </a>
+            </div>
+
+            <!-- Winter Harvest Roasted Seaweed Item -->
+            <div class="menu-item">
+                <img src="Seaweed.jpg.jpg" alt="Winter Harvest Roasted Seaweed">
+                <h3>Winter Harvest Roasted Seaweed</h3>
+                <p>Deliciously roasted seaweed, harvested in the winter season, offering a fresh and crispy snack experience.</p>
+                <a href="#contact">
+                    <button>Order Now</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-header">
+            <h2>About JapKor</h2>
+        </div>
+        <p>At JapKor, we specialize in offering a unique fusion of Japanese and Korean cuisine. Our menu is inspired by traditional dishes from both countries, but with our own creative twist. We focus on delivering delicious and satisfying meals, with a particular emphasis on kimbap — one of the most beloved snacks in Korean cuisine. Our offerings include both baked and triangular kimbap, prepared with the freshest ingredients, providing a perfect balance of flavors and textures. We also offer our special **Winter Harvest Roasted Seaweed**, a delicious and crispy snack that complements our kimbap dishes. Whether you're a fan of crispy, baked kimbap, the classic triangular version, or a simple yet delightful roasted seaweed snack, JapKor has something to delight your taste buds.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="section-header">
+            <h2>Our Gallery</h2>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Products1.jpg" alt="Food Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="BakedKim.jpg" alt="Food Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="Seaweed.jpg.jpg"Food Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Connect with us on <a href="https://www.facebook.com/your-facebook-page" target="_blank">Facebook</a> & <a href="https://www.instagram.com/your-instagram-page" target="_blank">Instagram</a> for updates and inquiries!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JapKor | All Rights Reserved</p>
+        <p>Follow us on <a href="https://www.instagram.com/your-instagram-page" target="_blank">Instagram</a> & <a href="https://www.facebook.com/your-facebook-page" target="_blank">Facebook</a></p>
+    </footer>
+
+</body>
+</html>
